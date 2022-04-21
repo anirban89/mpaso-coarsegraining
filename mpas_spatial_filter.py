@@ -60,7 +60,7 @@ def topo_filt(mesh, ring=1):
 
     filt = csr_matrix((xvec, (ivec, jvec))) ** ring
 
-#-- reset all nz values to one, for un-weighted averging
+#-- reset all nz values to one, for un-weighted averages
 
     filt.data[:] = 1
 
@@ -130,7 +130,8 @@ if (__name__ == "__main__"):
    #print(iadj)
 
    #plt.scatter(xc, yc, c="k", alpha=0.5)
-   #plt.scatter(xc[icol], yc[icol], c="r", alpha=0.5)
+   #plt.scatter(xc[iadj], yc[iadj], c="r", alpha=0.5)
+   #plt.scatter(xc[cell], yc[cell], c="b", alpha=0.5)
    #plt.axis("equal")
    #plt.show()
 
